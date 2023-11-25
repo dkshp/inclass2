@@ -1,9 +1,14 @@
 /*Daksh prajapati 8912306*/
+html{
+    font: normal normal normal 20px/1.5 Arial, Helvetica, sans-serif;
+}
 body{
-    font: normal normal normal 12px/1.5 Arial, Helvetica, sans-serif;
+   
     width: 100vw;
     height: 100vh;
     background-color: rgb(20, 210, 201);
+    display: flex;
+    flex-direction: column;
 }
 h2{
     color: #f02;
@@ -11,10 +16,17 @@ h2{
 }
 h1 {
     color: blueviolet;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 header{
     background-color: hsl(327, 100%, 51%);
+}
+figure{
+    border: 0.1rem black;
+}
+img{
+    width: 80%;
+    height: 80%;
 }
 nav ul li{
     display: inline;
@@ -22,26 +34,32 @@ nav ul li{
 }
 nav ul li a{
     color: indigo;
-    border: 2px solid indigo;
+    border: 0.1em solid indigo;
     background-color: cornsilk;
     text-decoration: none;
-    padding: 5px;
+    padding: 0.25em;
 }
 nav ul li a:hover{
     color: cornsilk;
     background: indigo;
     border-color: cornsilk;
 }
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
 main{
-    float : left;
-    width :65vw;
-    height: 130vh;
+    flex: 1 1 70%;
+    
     background-color: hsl(75, 84%, 65%);
 }
 aside{
-    float : right;
-    width : 25vw;
-    height: 40vh;
+    flex: 1 1 30%;
+    
     background-color: hsl(327, 100%, 51%);
 }
 aside li{
@@ -52,13 +70,13 @@ aside li{
     color: rgb(247, 251, 6)
    }
 footer{
-    clear : both;
+    
     background-color: hsl(10, 87%, 57%);
 }
 .structural{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid black;
+    margin: 1rem;
+    padding: 1rem;
+    border: 0.2rem solid black;
 }
 #para1{
      color: rgb(9, 9, 245);
@@ -68,8 +86,8 @@ footer{
 }
 
 form{
-    border: 5px dashed darkcyan;
-    padding: 5px;
+    border: 0.1rem dashed darkcyan;
+    padding: 0.1rem;
 }
 input[type=text], inputp[type=email] input[type=submit], select,option{
    display : block;
@@ -98,4 +116,24 @@ aside a:hover{
 }
 footer p{
     font-size: .75em;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0.5rem;
+    column-gap: 0.5;
+}
+@media (max-width: 600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    section{
+        display: block;
+    }
 }
